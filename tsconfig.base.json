@@ -15,8 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pga/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@pga/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@pga/core-data": ["libs/core-data/src/index.ts"],
+      "@pga/core-state": ["libs/core-state/src/index.ts"],
+      "@pga/material": ["libs/material/src/index.ts"]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp"],
+  "angularCompilerOptions": {
+    "strictTemplates": true
+  }
 }
