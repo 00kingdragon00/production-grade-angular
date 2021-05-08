@@ -13,9 +13,10 @@ import { RoutingModule } from './routing.module';
 import { WidgetsComponent } from './widgets/widgets.component';
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
 import { WidgetsDetailsComponent } from './widgets/widgets-details/widgets-details.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, WidgetsComponent, WidgetsListComponent, WidgetsDetailsComponent],
+  declarations: [AppComponent, WidgetsComponent, WidgetsListComponent, WidgetsDetailsComponent, HomeComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
