@@ -1,31 +1,35 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StoreModule } from '@ngrx/store';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { CoreDataModule, coreDataRoutes } from '@pga/core-data';
-import { CoreStateModule, coreStateRoutes } from '@pga/core-state';
-import { MaterialModule, materialRoutes } from '@pga/material';
-import { RoutingModule } from './routing.module';
-import { WidgetsComponent } from './widgets/widgets.component';
-import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
-import { WidgetsDetailsComponent } from './widgets/widgets-details/widgets-details.component';
+import { CoreDataModule } from '@pga/core-data';
+import { CoreStateModule } from '@pga/core-state';
+import { MaterialModule } from '@pga/material';
+import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { RoutingModule } from './routing.module';
+import { WidgetsDetailsComponent } from './widgets/widgets-details/widgets-details.component';
+import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
+import { WidgetsComponent } from './widgets/widgets.component';
 
 @NgModule({
-  declarations: [AppComponent, WidgetsComponent, WidgetsListComponent, WidgetsDetailsComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    WidgetsComponent,
+    WidgetsDetailsComponent,
+    WidgetsListComponent,
+  ],
   imports: [
-    BrowserModule,
-    HttpClientModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}, {}),
+    BrowserModule,
     CoreDataModule,
     CoreStateModule,
+    HttpClientModule,
     MaterialModule,
     RoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
