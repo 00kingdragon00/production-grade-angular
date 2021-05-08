@@ -10,9 +10,10 @@ import { CoreDataModule, CoreDataRoutes } from '@pga/core-data';
 import { CoreStateModule, coreStateRoutes } from '@pga/core-state';
 import { MaterialModule, materialRoutes } from '@pga/material';
 import { RoutingModule } from './routing.module';
+import { WidgetsComponent } from './widgets/widgets.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, WidgetsComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
