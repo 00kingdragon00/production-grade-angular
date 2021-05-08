@@ -9,6 +9,7 @@ import { StoreModule } from '@ngrx/store';
 import { CoreDataModule, CoreDataRoutes } from '@pga/core-data';
 import { CoreStateModule, coreStateRoutes } from '@pga/core-state';
 import { MaterialModule, materialRoutes } from '@pga/material';
+import { RoutingModule } from './routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { MaterialModule, materialRoutes } from '@pga/material';
     CoreDataModule,
     CoreStateModule,
     MaterialModule,
+    RoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
