@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Widget } from '@pga/api-interfaces';
+import { WidgetsService } from '@pga/core-data';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'pga-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
-  widgets: Widget[] = [
-    { id: '1', title: 'Widget 01', description: 'Pending' },
-    { id: '2', title: 'Widget 02', description: 'Pending' },
-    { id: '3', title: 'Widget 03', description: 'Pending' },
-  ];
+export class HomeComponent implements OnInit {
+  widgets: Observable<Widget[]>;
+
+  constructor(private widgetsService: WidgetsService) {}
+
+  ngOnInit() {
+    this.widgets = this.widgetsService.all();
+  }
 }
