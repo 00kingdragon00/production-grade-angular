@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreDataModule } from '@pga/core-data';
 import { CoreStateModule } from '@pga/core-state';
 import { MaterialModule } from '@pga/material';
+import { UiToolbarModule } from '@pga/ui-toolbar';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RoutingModule } from './routing.module';
@@ -29,7 +30,8 @@ import { WidgetsComponent } from './widgets/widgets.component';
     HttpClientModule,
     MaterialModule,
     RoutingModule,
-    FormsModule
+    FormsModule,
+    UiToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

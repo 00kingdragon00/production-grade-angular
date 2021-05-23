@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'pga-toolbar',
   templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.scss']
+  styleUrls: ['./toolbar.component.scss'],
 })
-export class ToolbarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class ToolbarComponent {
+  @Output() toggleSideNav = new EventEmitter();
+  @Output() logout = new EventEmitter();
 }
